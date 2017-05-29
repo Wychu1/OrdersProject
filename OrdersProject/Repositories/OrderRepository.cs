@@ -28,6 +28,10 @@ namespace OrdersProject.Repositories
                 ProductId = x.ProductId,
                 ContractorId = x.ContractorId,
                 UserId = x.UserId,
+                Price = x.Cost,
+                Seller = x.Seller,
+                Buyer = x.Buyer
+
 
             });
         }

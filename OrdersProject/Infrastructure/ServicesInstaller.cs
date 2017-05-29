@@ -12,7 +12,6 @@ namespace OrdersProject.Infrastructure
 {
     public class ServicesInstaller
     {
-        //Dla interfejsu IProductRepository zwraca klasę ProductInMemoryRepository
         public void Install(IWindsorContainer container, IConfigurationStore store)
         {
             container.Register(Component.For<IOrderRepository>().ImplementedBy<OrderRepository>());

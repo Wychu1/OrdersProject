@@ -13,6 +13,11 @@ namespace OrdersProject.Controllers
 
         private readonly IOrderRepository _repository;
 
+        public OrderController() : base()
+        {
+
+        }
+
         public OrderController(IOrderRepository repository)
         {
             _repository = repository;
