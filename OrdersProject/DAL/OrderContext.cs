@@ -8,9 +8,9 @@ using OrdersProject.Views.Entities;
 
 namespace OrdersProject.DAL
 {
-    public class OrdersContext : DbContext
+    public class OrderContext : DbContext
     {
-        public OrdersContext() : base("OrdersContext")
+        public OrderContext() : base("OrderContext")
         {
 
         }

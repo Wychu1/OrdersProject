@@ -16,6 +16,7 @@ namespace OrdersProject.Views.Entities
         public bool PaymentStatus { get; set; }
         public string Seller { get; set; }
         public string Buyer { get; set; }
+        public long UserId { get; set; }
 
     }
 }

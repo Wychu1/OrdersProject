@@ -1,0 +1,53 @@
+﻿@using Antlr.Runtime
+@model IEnumerable<OrdersProject.Models.OrderViewModel>
+
+<h2>List of orders</h2>
+
+<p>
+    <a href="@Url.Action("Create")" class="btn btn-primary"><i class="icon-next"></i>Create</a>
+</p>
+<table class="table table-hover table-striped">
+    <colgroup>
+        <col />
+        <col />
+        <col />
+        <col />
+        <col />
+        <col />
+    </colgroup>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Agency</th>
+            <th>Name of order</th>
+            <th>Cost</th>
+            <th>Seller</th>
+            <th>Buyer</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var order in Model)
+            {
+                <tr>
+                    <td>@order.Id</td>
+                    <td>@order.CompanyId</td>
+                    <td>@order.Name</td>
+                    <td>@order.Price</td>
+                    <td>@order.ContractorId</td>
+                    <td>@order.UserId</td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = order.Id }, new { @class = "btn btn-primary" })
+                        @using (Html.BeginForm("Delete", "Order"))
+                {
+                            @Html.Hidden("Id", order.Id)
+                            <button type="submit">Delete</button>
+                        }
+                    </td>
+                </tr>
+            }
+
+
+        }
+    </tbody>
+</table>
