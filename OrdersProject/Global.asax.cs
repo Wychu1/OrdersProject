@@ -19,8 +19,9 @@ namespace OrdersProject
 
         private static void BootstrapContainer()
         {
-            //WindsorControllerFactory tworzy obiekt poprzez pobranie go z kontenera
-           // _container = new WindsorContainer().Install(FromAssembly.This());
+            
+        //WindsorControllerFactory tworzy obiekt poprzez pobranie go z kontenera
+        _container = new WindsorContainer().Install(FromAssembly.This());
 
             //podmienia defaultowe kontrolery z naszym
             var controllerFactory = new WindsorControllerFactory(_container.Kernel);
