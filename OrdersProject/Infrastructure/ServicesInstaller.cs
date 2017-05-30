@@ -11,6 +11,7 @@ namespace OrdersProject.Infrastructure
         public void Install(IWindsorContainer container, IConfigurationStore store)
         {
             container.Register(Component.For<IOrderRepository>().ImplementedBy<OrderRepository>());
+            container.Register(Component.For<IProductRepository>().ImplementedBy<ProductRepository>());
 
             container.Register(Component.For<OrderContext>());
 

@@ -31,11 +31,11 @@
             {
                 <tr>
                     <td>@order.Id</td>
-                    <td>@order.CompanyId</td>
+                    <td>@order.CompanyName</td>
                     <td>@order.Name</td>
                     <td>@order.Price</td>
-                    <td>@order.ContractorId</td>
-                    <td>@order.UserId</td>
+                    <td>@order.ContractorName</td>
+                    <td>@order.UserName</td>
                     <td>
                         @Html.ActionLink("Edit", "Edit", new { id = order.Id }, new { @class = "btn btn-primary" })
                         @using (Html.BeginForm("Delete", "Order"))

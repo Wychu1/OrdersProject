@@ -7,23 +7,20 @@ using OrdersProject.Repositories;
 
 namespace OrdersProject.Controllers
 {
-    public class OrderController : Controller
+    public class ProductController : Controller
     {
+        private readonly IProductRepository _repository;
 
-        private readonly IOrderRepository _repository;
-
-
-        public OrderController(IOrderRepository repository)
+        public ProductController(IProductRepository repository)
         {
             _repository = repository;
         }
-
-        // GET: Order
+        // GET: Product
         public ActionResult List()
         {
-            var orders = _repository.GetOrders();
+            var products = _repository.GetProducts();
 
-            return View(orders);
+            return View(products);
         }
     }
 }
