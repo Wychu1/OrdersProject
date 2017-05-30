@@ -21,7 +21,7 @@ namespace OrdersProject
         {
             
         //WindsorControllerFactory tworzy obiekt poprzez pobranie go z kontenera
-        _container = new WindsorContainer().Install(FromAssembly.This());
+            _container = new WindsorContainer().Install(FromAssembly.This());
 
             //podmienia defaultowe kontrolery z naszym
             var controllerFactory = new WindsorControllerFactory(_container.Kernel);

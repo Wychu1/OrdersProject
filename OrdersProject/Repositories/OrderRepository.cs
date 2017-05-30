@@ -24,10 +24,10 @@ namespace OrdersProject.Repositories
             {
                 Id = x.Id,
                 Name = x.Name,
-                CompanyId = x.CompanyId,
-                ProductId = x.ProductId,
-                ContractorId = x.ContractorId,
-                UserId = x.UserId,
+                CompanyId = x.Company.Id,
+                ProductId = x.Product.Id,
+                ContractorId = x.Contractor.Id,
+                UserId = x.User.Id,
                 Price = x.Cost,
                 Seller = x.Seller,
                 Buyer = x.Buyer
